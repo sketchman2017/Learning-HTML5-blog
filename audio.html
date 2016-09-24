@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <title>English audio lessons</title>
+</head>
+
+<body>
+
+<hgroup>
+    <h1>English lessons</h1>
+    <h3>Listen & improve your knowledge of the English language. Press the link for a playing.</h3>
+<hgroup>
+
+<nav>
+    <ul>
+        <section>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 1.wav">Lesson 16.1</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 2.wav">Lesson 16.2</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 3.wav">Lesson 16.3</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 4.wav">Lesson 16.4</a></li>
+        </section>
+        
+        <section>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 5.wav">Lesson 17.1</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 6.wav">Lesson 17.2</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 7.wav">Lesson 17.3</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 8.wav">Lesson 17.4</a></li>
+        </section>
+
+        <section>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 9.wav">Lesson 18.1</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 10.wav">Lesson 18.2</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 11.wav">Lesson 18.3</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 12.wav">Lesson 18.4</a></li>
+        </section>
+
+        <section>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 13.wav">Lesson 19.1</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 14.wav">Lesson 19.2</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 15.wav">Lesson 19.3</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 16.wav">Lesson 19.4</a></li>
+        </section>
+
+        <section>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 17.wav">Lesson 20.1</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 18.wav">Lesson 20.2</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 19.wav">Lesson 20.3</a></li>
+            <li><a class="audio_list_element" href="audio lessons/16-20/Track 20.wav">Lesson 20.4</a></li>
+        </section>
+    <ul>
+</nav>
+
+<audio id="audio_player" src="audio lessons/16-20/Track 1.wav" controls preload>
+    Download the 
+    <a data="audio lessons/16-20/Track 1.wav">Lesson 16: A party</a>
+</audio>
+
+<style>
+    header, nav, footer, article, section {
+        display: block;
+    }
+
+    section {
+        padding: 1%;
+    }
+
+    nav {
+        float: left;
+        width: 20%;
+    }
+
+    section {
+        float: right;
+        width: 79%;
+    }
+
+</style>
+
+<script>
+
+    document.createElement('header');
+    document.createElement('nav');
+
+    document.createElement('article');
+    document.createElement('footer');
+
+    var audio_files = document.getElementsByClassName("audio_list_element");
+    
+    var audio_player = document.getElementById("audio_player");
+
+    for (var i = 0; i < audio_files.length; i++) {
+        audio_files[i].addEventListener("click",
+            function(event) {
+                event.preventDefault();
+                audio_player.src = this.href;
+                audio_player.play();      
+            }
+        );
+    }
+
+
+</script>
+
+</body>
+
+</html>
